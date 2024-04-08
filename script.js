@@ -1,6 +1,27 @@
 let num1;
 let operator;
 let num2;
+let displayValue = "";
+
+const display = document.querySelector(".result-display");
+const btnd = document.querySelectorAll(".btnd");
+const clearBtn = document.querySelector(".clearbtn");
+const resultBtn = document.querySelector(".resultbtn");
+
+btnd.forEach((element) => {
+  element.addEventListener("click", () => {
+    const textContent = element.textContent;
+    displayValue += textContent;
+    display.textContent = displayValue;
+  });
+});
+
+function clearDisplay() {
+  display.textContent = "";
+  displayValue = "";
+}
+
+clearBtn.addEventListener("click", clearDisplay);
 
 function add(num1, num2) {
   return num1 + num2;
