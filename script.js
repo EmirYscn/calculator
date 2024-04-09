@@ -39,11 +39,8 @@ sign.addEventListener("click", () => {
   if (!isSigned) {
     isSigned = !isSigned;
     displayResult = displayResult.replace(displayNumber, "");
-    console.log(displayResult);
     displayNumber = "-" + displayNumber;
-    console.log(displayNumber);
     displayResult += displayNumber;
-    console.log(displayResult);
     display.textContent = displayNumber;
   } else {
     isSigned = !isSigned;
@@ -64,19 +61,19 @@ resultBtn.addEventListener("click", grabValues);
 clearBtn.addEventListener("click", clearDisplay);
 
 function add(num1, num2) {
-  return num1 + num2;
+  return parseFloat((num1 + num2).toFixed(2));
 }
 function subtract(num1, num2) {
-  return num1 - num2;
+  return parseFloat((num1 - num2).toFixed(2));
 }
 function multiply(num1, num2) {
-  return num1 * num2;
+  return parseFloat((num1 * num2).toFixed(2));
 }
 function divide(num1, num2) {
-  return num1 / num2;
+  return parseFloat((num1 / num2).toFixed(2));
 }
 function modulo(num1, num2) {
-  return num1 % num2;
+  return parseFloat((num1 % num2).toFixed(2));
 }
 
 function operate(num1, operator, num2) {
@@ -102,22 +99,16 @@ function operate(num1, operator, num2) {
 }
 function evaluate(op) {
   let opIndex = displayResult.indexOf(op);
-  console.log(opIndex);
-  console.log(displayResult);
   if (!opIndex) {
     opIndex = displayResult.indexOf("-", opIndex + 1);
-    console.log(opIndex);
   }
-  console.log(opIndex);
   if (opIndex === -1) return;
   if (op === "-") {
     num1 = parseFloat(displayResult.slice(0, opIndex));
     num2 = parseFloat(displayResult.slice(opIndex + 1));
-    console.log(num1, num2);
   } else {
     num1 = parseFloat(displayResult.slice(0, opIndex));
     num2 = parseFloat(displayResult.slice(opIndex + 1));
-    console.log(num1, num2);
   }
 
   let result = operate(num1, op, num2).toString();
@@ -143,4 +134,3 @@ function grabValues() {
     return;
   }
 }
-console.log(subtract(4, -3));

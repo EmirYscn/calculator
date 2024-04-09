@@ -7,41 +7,49 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="calculator">
-        <div class="display"><p class="result-display"></p></div>
-        <div class="numbers">
-          <div class="row row1">
-            <button class="btn clearbtn">AC</button>
-            <button class="btn sign">+/-</button>
-            <button class="btn op">%</button>
-            <button class="btn op">/</button>
-          </div>
-          <div class="row row2">
-            <button class="btn number">7</button>
-            <button class="btn number">8</button>
-            <button class="btn number">9</button>
-            <button class="btn op">*</button>
-          </div>
-          <div class="row row3">
-            <button class="btn number">4</button>
-            <button class="btn number">5</button>
-            <button class="btn number">6</button>
-            <button class="btn op">-</button>
-          </div>
-          <div class="row row4">
-            <button class="btn number">1</button>
-            <button class="btn number">2</button>
-            <button class="btn number">3</button>
-            <button class="btn op">+</button>
-          </div>
-          <div class="row row5">
-            <button class="btn number zero">0</button>
-            <button class="btn dot">.</button>
-            <button class="btn resultbtn">=</button>
+    <div class="outer-container">
+      <div class="container">
+        <div class="calculator">
+          <div class="display"><p class="result-display"></p></div>
+          <div class="numbers">
+            <div class="row row1">
+              <button class="btn clearbtn">AC</button>
+              <button class="btn sign">+/-</button>
+              <button class="btn op">%</button>
+              <button class="btn op mainop">/</button>
+            </div>
+            <div class="row row2">
+              <button class="btn number">7</button>
+              <button class="btn number">8</button>
+              <button class="btn number">9</button>
+              <button class="btn op mainop">*</button>
+            </div>
+            <div class="row row3">
+              <button class="btn number">4</button>
+              <button class="btn number">5</button>
+              <button class="btn number">6</button>
+              <button class="btn op mainop">-</button>
+            </div>
+            <div class="row row4">
+              <button class="btn number">1</button>
+              <button class="btn number">2</button>
+              <button class="btn number">3</button>
+              <button class="btn op mainop">+</button>
+            </div>
+            <div class="row row5">
+              <button class="btn number zero">0</button>
+              <button class="btn dot">.</button>
+              <button class="btn resultbtn mainop">=</button>
+            </div>
           </div>
         </div>
       </div>
+      <footer class="footer">
+        <p>EmirYscn</p>
+        <a href="https://github.com/EmirYscn/calculator" target="_blank"
+          >Github Repo</a
+        >
+      </footer>
     </div>
     <script src="script.js"></script>
   </body>
